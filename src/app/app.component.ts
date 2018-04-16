@@ -1,13 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
-  selector: "app-heroes",
-  templateUrl: "./heroes.component.html",
-  styleUrls: ["./heroes.component.css"]
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
-//实现了OnInit接口的类
-export class HeroesComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
+export class AppComponent {
+  title = "yokiyokiyoki";
 }

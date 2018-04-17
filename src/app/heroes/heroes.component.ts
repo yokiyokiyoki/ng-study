@@ -7,6 +7,7 @@ import { Component, OnInit } from "@angular/core";
 })
 //实现了OnInit接口的类
 export class HeroesComponent implements OnInit {
+  hero = "yoki";
   constructor() {}
 
   ngOnInit() {}

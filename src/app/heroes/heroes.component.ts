@@ -1,5 +1,10 @@
 import { Component, OnInit } from "@angular/core";
 
+interface Hero {
+  id: number;
+  name: string;
+}
+
 @Component({
   selector: "app-heroes",
   templateUrl: "./heroes.component.html",
@@ -7,7 +12,10 @@ import { Component, OnInit } from "@angular/core";
 })
 //实现了OnInit接口的类
 export class HeroesComponent implements OnInit {
-  hero = "yoki";
+  hero: Hero = {
+    id: 1,
+    name: "yoki"
+  };
   constructor() {}
 
   ngOnInit() {}

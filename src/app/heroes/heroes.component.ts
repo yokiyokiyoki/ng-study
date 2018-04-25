@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 
-interface Hero {
-  id: number;
-  name: string;
-}
+import { Hero } from "../hero";
 
 @Component({
   selector: "app-heroes",

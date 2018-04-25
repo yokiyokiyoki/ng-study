@@ -1,5 +1,13 @@
-<p>
-  {{hero.id}}{{hero.name| uppercase}}
-  <input [(ngModel)]="hero.name" placeholder="name">
-</p>
-<p *ngFor='let hero of heroes'>{{hero.id}}:{{hero.name}}</p>
+<div *ngIf="selectedHero">
+
+  <h2>{{ selectedHero.name | uppercase }} Details</h2>
+  <div>
+    <span>id: </span>{{selectedHero.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedHero.name" placeholder="name">
+    </label>
+  </div>
+
+</div>
+<p *ngFor='let hero of heroes' (click)='onSelect(hero)'>{{hero.id}}:{{hero.name}}</p>

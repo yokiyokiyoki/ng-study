@@ -10,11 +10,11 @@ import { HEROES } from "../mock-heroes";
 })
 //实现了OnInit接口的类
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 1,
-    name: "yoki"
-  };
+  selectedHero: Hero;
   heroes = HEROES;
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
   constructor() {}
 
   ngOnInit() {}

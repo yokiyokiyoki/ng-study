@@ -2,3 +2,4 @@
   {{hero.id}}{{hero.name| uppercase}}
   <input [(ngModel)]="hero.name" placeholder="name">
 </p>
+<p *ngFor='let hero of heroes'>{{hero.id}}:{{hero.name}}</p>

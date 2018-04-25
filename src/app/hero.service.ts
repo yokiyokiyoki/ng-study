@@ -6,7 +6,7 @@ import { of } from "rxjs/observable/of";
 @Injectable()
 export class HeroService {
   constructor() {}
-  getHeroes(): Hero[] {
-    return HEROES;
+  getHeroes(): Observable<Hero[]> {
+    return of(HEROES);
   }
 }

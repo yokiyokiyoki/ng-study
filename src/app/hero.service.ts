@@ -10,9 +10,10 @@ export class HeroService {
     private http: HttpClient,
     private messageService: MessageService
   ) {}
-  private log(message:string){
-    this.messageService.add('HeroService: ' + message)
+  private log(message: string) {
+    this.messageService.add("HeroService: " + message);
   }
+  private heroesUrl = "api/heroes";
   getHeroes(): Observable<Hero[]> {
     this.messageService.add("HeroService:fetched heroes");
     return Observable.of(HEROES);

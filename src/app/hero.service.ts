@@ -16,10 +16,12 @@ export class HeroService {
   }
   private heroesUrl = "api/heroes";
   getHeroes(): Observable<Hero[]> {
-    this.log("HeroService:fetched heroes");
-    return this.http
-      .get<Hero[]>(this.heroesUrl)
-      .pipe(catchError(this.handleError("getHeroes", [])));
+    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+      tap(heroes => {
+        this.log(`fetched heroes`);
+      }),
+      catchError(this.handleError("getHeroes", []))
+    );
   }
   getHero(id: number): Observable<Hero> {
     this.messageService.add(`HeroService: fetched hero id=${id}`);
